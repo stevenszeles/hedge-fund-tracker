@@ -1,0 +1,11 @@
+services:
+  - type: web
+    runtime: docker
+    name: stevenszeles-hedge-fund-tracker
+    branch: master
+    plan: free
+    autoDeployTrigger: commit
+    healthCheckPath: /health
+    envVars:
+      - key: DOCKER_ENV
+        value: "1"
